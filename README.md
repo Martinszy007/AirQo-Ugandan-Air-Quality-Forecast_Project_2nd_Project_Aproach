@@ -2,7 +2,7 @@
 
 ## Approach
 
-Our solution treats the problem as a pseudo time-series where the algorithm learns the temporal nature of the data without any timestamp from which to extract time features. For this purpose, we utilize the idx features derived from the indices (positions) of the data points in their respective 5-day series using a stacked model to better learn the relationship between the meteorological variables and target.
+The solution treats the problem as a pseudo time-series where the algorithm learns the temporal nature of the data without any timestamp from which to extract time features. For this purpose, we utilize the idx features derived from the indices (positions) of the data points in their respective 5-day series using a stacked model to better learn the relationship between the meteorological variables and target.
 
 ### idx Features
 Many relations involving serial data, such as the sum of the first n-terms of a series, are usually a function of n. Without any date-time index, we treat the weather recordings as ordinary series. Since the objective of this challenge is to learn the relationship between air quality and the meteorological variables—a mere function of a (time) series—we include the indices of the observations within each series (ID) as features for the base model. 
